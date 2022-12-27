@@ -16,7 +16,7 @@ export const getAllPosts = async (req, res) => {
 
 export const createPost = async (req, res) => {
   try {
-    const post = await post.create(req.body);
+    const post = await Post.create(req.body);
     res.status(200).send({
       success: true,
       data: post,
@@ -31,7 +31,7 @@ export const createPost = async (req, res) => {
 
 export const post = async (req, res) => {
   try {
-    const post = await post.findById(req.params.id);
+    const post = await Post.findById(req.params.id);
     res.status(200).send({
       success: true,
       data: post,

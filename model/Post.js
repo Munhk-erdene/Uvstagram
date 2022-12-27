@@ -3,6 +3,8 @@ const userSchema = new mongoose.Schema({
   userName: String,
   likes: Number,
   image: String,
+  backgroundImage: String,
+  tags: Array,
   title: String,
   desp: String,
 });

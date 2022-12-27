@@ -6,10 +6,15 @@ import { port, mongo_uri } from "./config.js";
 import router from "./router/user.js";
 import routerPost from "./router/post.js";
 const app = express();
-app.use(cors());
+const corsOption = {
+  origin: "http://localhost:3000",
+  optionSuccesStatus: 200,
+};
+
+app.use(cors(corsOption));
 app.use(express.json());
 app.use("/", router);
-app.use("/Post", routerPost);
+app.use("/posts", routerPost);
 
 const connect = () => {
   try {
