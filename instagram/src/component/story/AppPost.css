@@ -1,0 +1,624 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  background-color: #f2f3f5;
+  height: 100vh;
+  overflow: scroll;
+}
+.container {
+  padding-top: 20px;
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.navbar {
+  background-color: white;
+  width: 20vw;
+  height: 100vh;
+  border: 1px solid #efefef;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  box-shadow: 5px 0px 5px 0px #efefef;
+  position: sticky;
+  top: 0px;
+}
+.newsfeed {
+  width: 24vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.storyAbout {
+  width: 24vw;
+  height: 120px;
+}
+.posts {
+  margin-top: 40px;
+  width: 24vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 5px 0px 5px 0px #efefef;
+}
+.www {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
+.navbarButton {
+  height: 64px;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 10px;
+}
+.navbarButtonContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.navbarButton:hover {
+  background-color: #cfd1d5;
+}
+.navbarImg {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+.buttonName {
+  margin-left: 20px;
+}
+.buttonLogo {
+  padding: 25px 12px 16px;
+  height: 40px;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.navbarClick {
+  background-color: white;
+  width: 80px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #efefef;
+}
+.navbarButtonClick {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonLogoClick {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.numberImgClick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbarSearch {
+  width: 17vw;
+  height: 100vh;
+  background-color: white;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.navbarsContainer {
+  width: 24vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #efefef;
+
+  box-shadow: 5px 0px 5px 0px #efefef;
+  position: sticky;
+  top: 0px;
+}
+.mainOne {
+  width: 17vw;
+  height: 150px;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.mainTwo {
+  width: 17vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.navbarSearchTitle {
+  font-size: 25px;
+  font-weight: 700;
+  width: 90%;
+}
+.navbarInput {
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #efefef;
+  border: 0.1px solid #efefef;
+  font-size: 16px;
+}
+.recent {
+  width: 90%;
+  height: 80vh;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  overflow-y: scroll;
+}
+.userData {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.userDataBox {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+}
+.userName {
+  color: grey;
+  font-weight: 400;
+  column-gap: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.names {
+  margin-left: 20px;
+}
+.profile {
+  width: 18vw;
+  height: 500px;
+  padding: 10px;
+  position: fixed;
+  top: 29px;
+}
+.profiled {
+  width: 18vw;
+  height: 500px;
+  padding: 10px;
+}
+.userImg {
+  width: 32px;
+  height: 32px;
+  margin-left: 7px;
+  margin-right: 20px;
+  /* background: linear-gradient(45deg, red, blue); */
+  background-color: black;
+  border-radius: 50%;
+}
+
+.userFatherDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.Switch {
+  height: 30px;
+  color: #0095f6;
+  font-weight: 600;
+  font-size: 14px;
+}
+.suggest {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.suggestText {
+  color: grey;
+  font-weight: 600;
+  padding: 7px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.myProfileImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0095f6;
+  margin-left: 7px;
+  margin-right: 20px;
+}
+.sda {
+  display: flex;
+  padding: 7px;
+  font-weight: 600;
+}
+.myProfile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.profileMain {
+  padding: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profileContainer {
+  height: 95vh;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.profileAbout {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.profileImg {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #0095f6;
+}
+.followersContainer {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  gap: 50px;
+}
+.miniContainer {
+  height: 200px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.about {
+  font-size: 28px;
+}
+.addStory {
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  background-color: #0095f6;
+}
+.newStory {
+  width: 100%;
+  height: 10vh;
+  margin: 50px;
+}
+.profilePosts {
+  width: 50vw;
+  height: 70vh;
+  border-top: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.postButtons {
+  width: 33%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.storyImg {
+  height: 60px;
+  width: 60px;
+  border: 2px solid crimson;
+  border-radius: 50%;
+  gap: auto;
+  background-color: black;
+  background: linear-gradient(to bottom left, #6600ff, #ff9900);
+}
+.storyBox {
+  font-size: 14px;
+  height: 12vh;
+  border: 0.5px solid #cfd1d5;
+  background-color: white;
+  display: flex;
+  overflow: scroll;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 0px 5px 0px #efefef;
+}
+.storyContainer {
+  margin-left: 10px;
+}
+.postOne {
+  width: 24vw;
+  background-color: white;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+.postOne {
+  height: 62vh;
+  margin-top: 20px;
+  border: 0.5px solid #cfd1d5;
+}
+.postProfile {
+  height: 7vh;
+}
+.postImage {
+  width: 100%;
+  background-color: #0095f6;
+  height: 40vh;
+}
+.miniContain {
+  padding: 10px;
+}
+.postContainer {
+  width: 24vw;
+  height: auto;
+}
+.profilediv {
+  background-color: #0095f6;
+  border-radius: 50%;
+}
+.visible {
+  display: block;
+}
+.none {
+  display: none;
+}
+.postIcons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.one {
+  display: flex;
+  flex-direction: row;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.nnn {
+  width: 90%;
+  margin-top: 10px;
+}
+.postInput {
+  width: 100%;
+  height: 50px;
+}
+.input {
+  margin-top: 20px;
+  width: 95%;
+  height: 30px;
+  border: 0.1px solid white;
+}
+.input:focus {
+  outline: 0px;
+}
+.postProfile {
+  display: flex;
+  align-items: center;
+}
+.aboutContainer {
+  width: 12vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.edit {
+  width: 100px;
+  height: 30px;
+  border: 0.5px solid #cfd1d5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.bbb {
+  height: 100%;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.bbb:hover {
+  background-color: #cfd1d5;
+}
+.iconMini {
+  margin-right: 10px;
+}
+.postOfProfile {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.postImageContainer {
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zurag {
+  width: 300px;
+}
+.prorouter {
+  height: 100vh;
+}
+@media (min-width: 900px) and (max-width: 1600px) {
+  .profile {
+    display: none;
+  }
+  .profiled {
+    display: none;
+  }
+  .container {
+    width: 50vw;
+  }
+  .newsfeed {
+    width: 50vw;
+  }
+  .storyAbout {
+    width: 40vw;
+  }
+  .posts {
+    width: 40vw;
+  }
+  .postContainer {
+    width: 40vw;
+  }
+  .postOne {
+    width: 40vw;
+  }
+  .postOfProfile {
+    grid-template-columns: 1fr 1fr;
+  }
+  .profileContainer {
+    width: 80vw;
+  }
+}
+@media (min-width: 400px) and (max-width: 899px) {
+  .profiled {
+    display: none;
+  }
+  .container {
+    width: 70vw;
+  }
+  .newsfeed {
+    width: 70vw;
+  }
+  .storyAbout {
+    width: 70vw;
+  }
+  .posts {
+    width: 70vw;
+  }
+  .postContainer {
+    width: 70vw;
+  }
+  .postOne {
+    width: 70vw;
+  }
+  .buttonName {
+    display: none;
+  }
+  .visible {
+    display: none;
+  }
+  .none {
+    display: block;
+    margin-left: 18px;
+  }
+  .navbar {
+    width: 70px;
+  }
+  .navbarSearch {
+    display: none;
+  }
+  .postOfProfile {
+    grid-template-columns: 1fr;
+  }
+  .navbarButtonContainer {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+  .iconMini {
+    display: none;
+  }
+  .profileAbout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .postButtons {
+    width: 100%;
+  }
+  .followersContainer {
+    display: none;
+  }
+  .aboutContainer {
+    flex-direction: column;
+  }
+  .profileContainer {
+    align-items: center;
+    width: 100vw;
+    margin: 0;
+  }
+  .postImageContainer {
+    width: 200px;
+  }
+  .newStory {
+    display: none;
+    margin: 0;
+  }
+  .prorouter {
+    width: 100vw;
+  }
+  .profileAbout {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .www {
+    width: 100vw;
+  }
+  .miniContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .aboutContainer {
+    height: 30vh;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (max-width: 400px) {
+  .App {
+    display: none;
+  }
+}
