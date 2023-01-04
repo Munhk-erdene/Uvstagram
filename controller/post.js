@@ -4,12 +4,12 @@ export const getAllPosts = async (req, res) => {
     const posts = await Post.find({});
     res.status(200).send({
       success: true,
-      data: posts,
+      posts: posts,
     });
   } catch (error) {
     res.status(400).send({
       success: true,
-      data: error.message,
+      posts: error.message,
     });
   }
 };
@@ -46,7 +46,7 @@ export const post = async (req, res) => {
 export const updatePost = async (req, res) => {
   try {
     const { id } = req.params;
-    const post = await Post.findByIdAndUpdate({ _id: id });
+    const post = await Post.findByIdAndUpdate({ _id: id }, req.body);
     res.status(200).send({
       success: true,
       data: post,
