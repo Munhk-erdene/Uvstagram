@@ -1,10 +1,12 @@
 import express from "express";
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 import cors from "cors";
-import { port, mongo_uri } from "./config.js";
-
+import dotenv from "dotenv";
 import router from "./router/user.js";
 import routerPost from "./router/post.js";
+dotenv.config();
+const uri = process.env.MONGO_URI || "";
+const port = process.env.PORT;
 const app = express();
 const corsOption = {
   origin: "http://localhost:3000",
@@ -17,17 +19,18 @@ app.use("/", router);
 app.use("/posts", routerPost);
 
 const connect = () => {
-  try {
-    mongoose.connect(mongo_uri, {}).then(() => {
+  mongoose
+    .connect(uri, {})
+    .then(() => {
       console.log("connected to DB");
+    })
+    .catch((error) => {
+      console.error(error);
+      process.exit(1);
     });
-  } catch (error) {
-    console.error("Could not connect to DB");
-    process.exit(1);
-  }
 };
 
 app.listen(port, async () => {
-  connect();
   console.log(`app running ${port}`);
+  connect();
 });

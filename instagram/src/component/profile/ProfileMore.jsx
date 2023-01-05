@@ -11,7 +11,6 @@ const ProfileMore = () => {
     const response = await instance.get(`/`);
     setData(response.data.data);
     setPic(response.data.data);
-    console.log(response.data.data);
   };
 
   useEffect(() => {

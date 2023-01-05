@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./component/Home";
 import ProRouter from "./component/profile/ProRouter";
+import Create from "./component/create/Create";
 export const NavbarChange = createContext();
 export const instance = axios.create({
   baseURL: "http://localhost:8000/users",
@@ -33,6 +34,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:id" element={<ProRouter />} />
+            <Route path="/Create" element={<Create />} />
           </Routes>
         </div>
       </div>

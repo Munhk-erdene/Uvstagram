@@ -1,10 +1,10 @@
 import React from "react";
 import { instanceTwo, instance } from "../../App";
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const CreatePost = () => {
+const Create = () => {
   const background = useRef();
   const title = useRef();
   const name = useRef();
@@ -28,15 +28,24 @@ const CreatePost = () => {
   };
 
   return (
-    <div>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+    <div style={{ alignItems: "center", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "500px",
+          marginTop: "10",
+        }}
+      >
         create a post!
         <input ref={background} type="text" placeholder="zurag" />
         <input ref={title} type="text" placeholder="title" />
         <button onClick={clickHandler}>Create!</button>
         <ToastContainer />
       </div>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{ display: "flex", flexDirection: "column", marginTop: "10%" }}
+      >
         {" "}
         create a user!
         <input ref={zurag} type="text" placeholder="zurag" />
@@ -47,4 +56,4 @@ const CreatePost = () => {
     </div>
   );
 };
-export default CreatePost;
+export default Create;

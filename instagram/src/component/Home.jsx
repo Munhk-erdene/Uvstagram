@@ -1,7 +1,6 @@
 import ProfileMore from "./profile/ProfileMore";
 import StoryContainer from "./story/StoryCam";
 import Post from "./post/Post";
-import CreatePost from "./create/CreatePost";
 const Home = () => {
   return (
     <div className="container">
@@ -10,7 +9,6 @@ const Home = () => {
           <StoryContainer />
         </div>
         <div className="posts">
-          <CreatePost/>
           <Post />
         </div>
       </div>

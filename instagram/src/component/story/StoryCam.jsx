@@ -8,7 +8,6 @@ const StoryContainer = () => {
 
   const getData = async () => {
     const rosponse = await instance.get("/");
-    console.log(rosponse.data.data);
     setData(rosponse.data.data);
   };
 

@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import { NavbarChange } from "../../App";
 import { instance } from "../../App";
-import e from "cors";
 const Navbar = () => {
   const { navbar, setNavbar } = useContext(NavbarChange);
   const [profile, setProfile] = useState([]);
@@ -141,7 +140,12 @@ const Navbar = () => {
               <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
             </svg>
           </div>
-          <span className="buttonName">Create</span>
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="./Create"
+          >
+            <span className="buttonName">Create</span>
+          </Link>
         </div>
         <Link
           to="./1"
@@ -157,9 +161,7 @@ const Navbar = () => {
               style={{ width: "30px", height: "30px" }}
               alt=""
             />
-            <div>
-  
-            </div>
+            <div></div>
           </div>
           <span className="buttonName">Profile</span>
         </Link>
